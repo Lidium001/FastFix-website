@@ -2,93 +2,603 @@
 <html>
 <head>
 <title>FASTFIX</title>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width, initial-scale=1">
-<style>#ba{background-image:url("wallpaper.png");width:100%;height:auto;background-position:center;background-repeat:no-repeat;background-size:cover}@media screen and (min-width:601px){div.tit1{font-size:5em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit1{font-size:1.5em;font-family:'Trebuchet MS',sans-serif}}@media screen and (min-width:601px){div.tit2{font-size:2.5em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit2{font-size:1.5em;font-family:'Trebuchet MS',sans-serif}}@media screen and (min-width:601px){div.tit3{font-size:4em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit3{font-size:2em;font-family:'Trebuchet MS',sans-serif}}@media screen and (min-width:601px){div.tit4{font-size:3em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit4{font-size:1.5em;font-family:'Trebuchet MS',sans-serif}}@media screen and (min-width:601px){div.tit5{font-size:2em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit5{font-size:1em;font-family:'Trebuchet MS',sans-serif}}@media screen and (min-width:601px){div.tit6{font-size:4em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit6{font-size:1.5em;font-family:'Trebuchet MS',sans-serif}}@media screen and (min-width:601px){div.tit7{font-size:4em;font-family:'Trebuchet MS',sans-serif}}@media screen and (max-width:600px){div.tit7{font-size:1.5em;font-family:'Trebuchet MS',sans-serif}}.float{position:fixed;width:100px;height:100px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:100px;text-align:center;font-size:25px;box-shadow:2px 2px 3px #999;z-index:100}.my-float{margin-top:16px}.fa-facebook{background:#3b5998;color:white;border-radius:50px;padding:10px;max-width:100%;text-align:center;text-decoration:none;text-align:center;height:auto}.fa-instagram{background:#cb2027;color:white;padding:10px;border-radius:100px;text-align:center;max-width:100%;height:auto}li{color:white;font-family:'Trebuchet MS',sans-serif}*{box-sizing:border-box}body{font-family:Arial;margin:0}.header{padding:60px;text-align:center;background:#1abc9c;color:white}.row{display:flex;flex-wrap:wrap}.row1{display:flex;flex-wrap:wrap;background-color:#101728;background-image:linear-gradient(180deg,rgba(16,23,40,1) 10%,rgba(0,0,0,1) 100%)}.row2{display:flex;flex-wrap:wrap;background-color:rgba(0,0,0,1);background-image:linear-gradient(180deg,rgba(0,0,0,1) 10%,rgba(16,23,40,1) 100%)}.side{flex:70%;margin-right:100px;margin-left:100px;margin-top:150px}.side1{flex:50%;background-color:#101728;padding:20px}.side2{flex:50%;padding:20px}.side3{flex:50%;background-color:black;padding:20px}.side4{flex:50%;padding:20px}.main{flex:30%;padding:20px}.main1{flex:50%;background-color:#101728;padding:20px}.main2{flex:50%;padding:20px}.main3{flex:50%;background-color:black;padding:20px}.main4{flex:50%;padding:20px}.main5{flex:50%;background-color:#101728;padding:20px}.rachados{max-width:100%;height:auto;border-radius:20%;margin-right:50px;content:url(rachados.png)}.button{content:url(button.png);border-radius:100%;max-width:100%;height:auto}.escudos{width:100%;height:auto;max-width:300px;content:url(escudos.png)}.manutencao{width:100%;height:auto;padding:20px;content:url(manutencao.png)}.manutencao2{max-width:100%;height:auto;padding:20px;border-radius:10%;content:url(manutencao2.png);min-width:300px}.logo{max-width:100%;height:auto;content:url(logo.png)}.mlogo{max-width:100%;height:auto;content:url(mlogo.png)}.mlogo2{max-width:100%;height:auto;content:url(mlogo.png)}.footer{text-align:left;background:#2d6992;width:100%;height:10vw}@media screen and (max-width:700px){.row,.navbar{flex-direction:column}}@media screen and (max-width:600px){iframe{width:60%;height:auto}}h1{font-size:1em;font-family:'Trebuchet MS',sans-serif}h2{font-family:'Trebuchet MS',sans-serif}h3{padding-left:20px;font-family:'Trebuchet MS',sans-serif}h6{font-family:'Trebuchet MS',sans-serif}h4{font-size:50px;padding-left:20px;font-family:'Trebuchet MS',sans-serif}h5{font-family:'Trebuchet MS',sans-serif}p{padding-left:20px;font-family:'Trebuchet MS',sans-serif}p2{font-size:27px;padding-left:20px;font-family:'Trebuchet MS',sans-serif}pre{font-size:25px;padding-left:20px;font-family:'Trebuchet MS',sans-serif}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>#ba {
+  background-image: url("wallpaper.png");
+  width: 100%;
+  
+  height: auto;
+  
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+
+}
+
+@media screen and (min-width: 601px) {
+  div.tit1 {
+    font-size: 5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit1 {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+@media screen and (min-width: 601px) {
+  div.tit2 {
+    font-size: 2.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit2 {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.tit3 {
+    font-size: 4em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit3 {
+    font-size: 2em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.tit4 {
+    font-size: 3em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit4 {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+@media screen and (min-width: 601px) {
+  div.tit5 {
+    font-size: 2em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit5 {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+@media screen and (min-width: 601px) {
+  div.tit6 {
+    font-size: 4em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit6 {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.tit7 {
+    font-size: 4em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.tit7 {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
+
+.float{
+	position:fixed;
+	width:100px;
+	height:100px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:100px;
+	text-align:center;
+  font-size:25px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius:50px;
+  padding:10px;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  text-align:center;
+  height:auto;
+  
+}
+
+.fa-instagram {
+  background: #cb2027;
+  color: white;
+  padding: 10px;
+  border-radius:100px;
+  text-align:center;
+  max-width:100%;
+  height:auto;
+  
+
+}
+
+li {
+   
+
+
+   color: white;
+  
+ 
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+.row1 {  
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(16,23,40);
+  background-image: linear-gradient(180deg, rgba(16,23,40,1) 10%, rgba(0,0,0,1) 100%);
+}
+.row2 {  
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(0,0,0,1);
+  background-image: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(16,23,40,1) 100%);
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 70%;
+  
+  
+  margin-right:100px;
+  margin-left:100px;
+  margin-top:150px;
+}
+
+/* Main column */
+
+.side1 {
+  flex: 50%;
+  background-color: #101728;
+  padding: 20px;
+}
+.side2 {
+  flex: 50%;
+
+  padding: 20px;
+ 
+ 
+}
+.side3 {
+  flex: 50%;
+  background-color: black;
+  padding: 20px;
+ 
+}
+.side4 {
+  flex: 50%;
+
+  padding:20px;
+
+}
+
+/* Main column */
+.main {
+  flex: 30%;
+  
+  padding: 20px;
+}
+
+.main1 {
+  flex: 50%;
+  background-color: #101728;
+  padding: 20px;
+}
+/* Main column */
+.main2 {
+  flex: 50%;
+
+  padding:20px;
+ 
+}
+/* Main column */
+.main3 {
+  flex: 50%;
+  background-color: black;
+  padding:20px;
+  
+}
+.main4 {
+  flex: 50%;
+ 
+  padding:20px;
+  
+  
+}
+.main5 {
+  flex: 50%;
+  background-color: #101728;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.rachados {
+  
+  max-width: 100%;
+  height: auto;
+  border-radius: 20%;
+  margin-right:50px;
+
+ 
+  
+ 
+  content:url(rachados.png); 
+}
+.button {
+  content:url(button.png);
+  border-radius:100%;
+  
+  max-width:100%;
+  height:auto;
+}
+
+.escudos {
+  
+  width: 100%;
+  height:auto;
+  max-width:300px;
+ 
+  content:url(escudos.png); 
+}
+.manutencao {
+
+  width: 100%;
+  
+  height:auto;
+  padding: 20px;
+  content:url(manutencao.png); 
+}
+.manutencao2 {
+
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10%;
+  content:url(manutencao2.png); 
+  min-width:300px;
+ 
+}
+.logo {
+  max-width:100%;
+  height:auto;
+  
+  
+  content:url(logo.png); 
+}
+.mlogo {
+
+  max-width: 100%;
+  height:auto;
+ 
+  
+  
+  content:url(mlogo.png); 
+}
+.mlogo2 {
+
+  max-width: 100%;
+  height:auto;
+ 
+ 
+ 
+  
+  
+  content:url(mlogo.png); 
+}
+/* Footer */
+.footer {
+  
+  text-align: left;
+  background: #2D6992;
+  width:100%;
+  height:10vw;
+
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+   iframe {
+     width:60%;
+     height:auto;
+     
+  }
+}
+
+
+
+h1 {
+  font-size: 1em;
+  
+  
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+  
+
+ 
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+h3{
+  
+  padding-left:20px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+h6{
+  
+  
+  font-family: 'Trebuchet MS', sans-serif;
+}
+h4{
+  font-size: 50px;
+ 
+   padding-left:20px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+h5{
+ 
+ 
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+
+p{
+   
+
+   padding-left:20px;
+ 
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+p2{
+   font-size: 27px;
+   padding-left:20px;
+   
+ 
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+pre{
+   font-size: 25px;
+   padding-left:20px;
+   
+ 
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+
+</style>
 </head>
-<body style=background-color:#101728><div id=ba>
-<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css>
-<a href="https://wa.me/5547992812188?text=Ol%C3%A1%2C+gostaria+de+fazer+um+or%C3%A7amento." class=float target=_blank>
+<body style="background-color:#101728;"><div id="ba">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5547992812188?text=Ol%C3%A1%2C+gostaria+de+fazer+um+or%C3%A7amento." class="float" target="_blank">
 <i class="fa fa-whatsapp my-float fa-3x"></i>
 </a>
-<div class=row>
-<div class=main>
-<div class=tit2><FONT COLOR=#FFFFFF><h1><img src=mlogo.png>
-FASTFIX </h1> </div>
-<div class=tit1><h2> O melhor<br> conserto de <br>Joinville </h2></div>
-<a href="https://wa.me/5547992812188?text=Ol%C3%A1%2C+gostaria+de+fazer+um+or%C3%A7amento."><div class=button></div></a>
+
+<!-- Note -->
+
+
+
+
+
+
+<!-- The flexible grid (content) -->
+
+  <div class="row">
+  <div class="main">
+    <div class="tit2"><FONT COLOR="#FFFFFF"><h1><img src="mlogo.png">
+  
+   FASTFIX </h1> </div>
+   <div class="tit1"><h2> O melhor<br> conserto de <br>Joinville </h2></div>
+    
+   <a href="https://wa.me/5547992812188?text=Ol%C3%A1%2C+gostaria+de+fazer+um+or%C3%A7amento."><div class="button"></div></a>
+  
+  </div>
+  <div class="side">
+
+      <div class="rachados"></div>
+ 
+  </div>
 </div>
-<div class=side>
-<div class=rachados></div>
 </div>
-</div>
-</div>
-<div class=row>
-<div class=main5>
-<div class=tit3><h6><center>Quebrou seu smartphone?</center></h6></div>
-<div class=tit4><h5><center>Não se preocupe, vamos salvar seu tempo e dinheiro</center></h5></div>
-<center><div class=escudos></div></center>
-<div class=tit5> <center><p>Sustentável, Seguro e Econômico.<br><br>
+<div class="row">
+
+  <div class="main5">
+     <div class="tit3"><h6><center>Quebrou seu smartphone?</center></h6></div>
+<div class="tit4"><h5><center>Não se preocupe, vamos salvar seu tempo e dinheiro</center></h5></div>
+   
+    <center><div class="escudos"></div></center>
+   <div class="tit5"> <center><p>Sustentável, Seguro e Econômico.<br><br>
 Aqui você tem garantia de 3 meses e descartamos todas as peças de forma consciente
 Desfrute de Consertos rápidos e econômicos, nossos Técnicos são experts.<br>
-</p></center></div>
+
+ 
+
+ </p></center></div>
+    
+  </div>
 </div>
-</div>
-<div class=row>
-<div class=side1>
-<div class=tit6><h3><FONT COLOR=#934Off>Atendimento<br>Homenow</h3></div>
-<div class=tit5><p><FONT COLOR=#FFFFFF>Sua vida não pode parar! Com o HomeNow não há necessidade de ir até a loja, nós levamos nosso técnico altamente qualificado até você para realizar o conserto e em seguida devolver em perfeito estado.
+
+  
+<div class="row">
+  <div class="side1">
+    <div class="tit6"><h3><FONT COLOR="#934Off">Atendimento<br>Homenow</h3></div>
+    
+    <div class="tit5"><p><FONT COLOR="#FFFFFF">Sua vida não pode parar! Com o HomeNow não há necessidade de ir até a loja, nós levamos nosso técnico altamente qualificado até você para realizar o conserto e em seguida devolver em perfeito estado.
 <br>Não fique mais sem seu aparelho; experimente nossos serviços hoje mesmo e volte a desfrutar de todas as suas atividades diárias com seu celular em pleno funcionamento. <br><br>Aproveite nossa oferta exclusiva agora<br> e entre em contato pelo botão do Whatsapp!</div>
 </p><br><br><br></p>
+    
+  </div>
+  <div class="main1">
+    <div class="manutencao">Image</div>
+   
+  </div>
 </div>
-<div class=main1>
-<div class=manutencao>Image</div>
+
+  <div class="row1">
+  <div class="side2">
+   
+    <div class="manutencao2" style="height:auto"></div>
+
+   
+  </div>
+  <div class="main2">
+    <div class="tit6"><h3><FONT COLOR="#934Off">Serviços</h3></div>
+    <ul>
+     <div class="tit5"><li><FONT COLOR="#FFFFFF">Reposição de telas e vidros traseiros</li>
+     <li>Troca de bateria e câmeras frontal</li>
+     <li>câmeras frontal e traseira</li>
+     <li>Conserto do microfone</li>
+     <li>captador de áudio</li>
+     <li>Desoxidação de componentes eletrônicos</li></ul></div>
+    
+    <br>
+
+    </div>
+
 </div>
-</div>
-<div class=row1>
-<div class=side2>
-<div class=manutencao2 style=height:auto></div>
-</div>
-<div class=main2>
-<div class=tit6><h3><FONT COLOR=#934Off>Serviços</h3></div>
-<ul>
-<div class=tit5><li><FONT COLOR=#FFFFFF>Reposição de telas e vidros traseiros</li>
-<li>Troca de bateria e câmeras frontal</li>
-<li>câmeras frontal e traseira</li>
-<li>Conserto do microfone</li>
-<li>captador de áudio</li>
-<li>Desoxidação de componentes eletrônicos</li></ul></div>
-<br>
-</div>
-</div>
-<div class=row>
-<div class=main3>
-<div class=tit6><h4>Especialidade</h4></div>
-<div class=tit5><dt><p>Linha apple:</p><dt></div>
-<div class=tit5><dd><p>- Iphones: 5, 6, 7, 8, X, 11, 12, 13, 14.<br>
-- Ipads.<br>
+  
+
+
+   
+  <div class="row">
+  <div class="main3">
+       
+       <div class="tit6"><h4>Especialidade</h4></div>
+     <div class="tit5"><dt><p>Linha apple:</p><dt></div>
+    <div class="tit5"><dd><p>- Iphones: 5, 6, 7, 8, X, 11, 12, 13, 14.<br>
+ - Ipads.<br>
 Outras marcas: Samsung, Xiaomi, LG,<br> Motorola, Lenovo, Poco, Asus, Nokia...</p></dd></div>
+      
+     
+     
+
+  
+    
+
+      
+  </div>
+
+  <div class="side3">
+     
+    
+    
+    <div class="logo"></div>
+ 
+    
+
+  </div>
 </div>
-<div class=side3>
-<div class=logo></div>
+
+
+  <div class="row2">
+
+  
+  <div class="side4">
+     <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.3660187686028!2d-48.85056618531053!3d-26.314644974862397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb050c1c44a45%3A0x4a41e418a2256852!2sR.%20Bahia%2C%2099%20-%20Anita%20Garibaldi%2C%20Joinville%20-%20SC%2C%2089203-580!5e0!3m2!1spt-BR!2sbr!4v1671732448912!5m2!1spt-BR!2sbr"   width="600" height="450"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe></p>
+     </div>
+    
+    
+   
+  
+  <div class="main4">
+     <div class="tit6"><h3><FONT COLOR="#934Off">Chame-nos no<br>whatsapp.</h3></div>
+     <div class="tit5"><p><FONT COLOR="#FFFFFF">Telefone: (47)99281-2188</p>
+     <p>Endereço: Rua Bahia n 99</p></div>
+    
+    <!-- Add icon library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <br><br><br>
+     <a href="https://www.facebook.com/FastFix-102664049187763/" class="fa fa-facebook"></a>
+     <a href="https://www.instagram.com/invites/contact/?i=1rsnove8bbbs&utm_content=olxj4tb" class="fa fa-instagram"></a>
+   
+   </div>
+ </div>
+<div class="footer">
+  <div class="tit5"><p>Todos os direitos reservados</p></div>
 </div>
-</div>
-<div class=row2>
-<div class=side4>
-<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.3660187686028!2d-48.85056618531053!3d-26.314644974862397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb050c1c44a45%3A0x4a41e418a2256852!2sR.%20Bahia%2C%2099%20-%20Anita%20Garibaldi%2C%20Joinville%20-%20SC%2C%2089203-580!5e0!3m2!1spt-BR!2sbr!4v1671732448912!5m2!1spt-BR!2sbr" width=600 height=450 style=border:0 allowfullscreen loading=lazy referrerpolicy=no-referrer-when-downgrade></iframe></iframe></p>
-</div>
-<div class=main4>
-<div class=tit6><h3><FONT COLOR=#934Off>Chame-nos no<br>whatsapp.</h3></div>
-<div class=tit5><p><FONT COLOR=#FFFFFF>Telefone: (47)99281-2188</p>
-<p>Endereço: Rua Bahia n 99</p></div>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
-<br><br><br>
-<a href=https://www.facebook.com/FastFix-102664049187763/ class="fa fa-facebook"></a>
-<a href="https://www.instagram.com/invites/contact/?i=1rsnove8bbbs&utm_content=olxj4tb" class="fa fa-instagram"></a>
-</div>
-</div>
-<div class=footer>
-<div class=tit5><p>Todos os direitos reservados</p></div>
-</div>
+
+
 </body>
 </html>
+
+
